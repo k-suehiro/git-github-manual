@@ -1,0 +1,8 @@
+{
+  "template": "standard-responsive",
+  "theme": "light",
+  "lang": "ja_JP",
+  "search": "js",
+  "any_page_print": true,
+  "minify": true
+}

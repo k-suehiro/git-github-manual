@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>作業ブランチを作成します。ここでは「ファイルを新しく追加する」作業を行うため、ブランチ名は「<code>add-new-file</code>」としておきます。</p>
+      <pre><samp>$ git branch add-new-file</samp></pre>
+      
+      <p>ブランチが作成されているか確かめます。ここで、アスタリスク（<code>*</code>）が付いているブランチと、付いていないブランチが確認できるでしょう。</p>
+      <pre><samp>$ git branch
+  add-new-file
+* master</samp></pre>
+      
+      <p>アスタリスクが付いているブランチが、現在選択中のブランチです。この例では、<code>master</code> <strong>ブランチ</strong>と <code>add-new-file</code> <strong>ブランチが存在し、現在は</strong> <code>master</code> <strong>ブランチで作業している</strong>ということが分かります。</p>
+      
+      <p>作業したい <strong>add-new-file</strong> ブランチに移動します。</p>
+      <pre><samp>$ git checkout add-new-file
+Switched to branch 'add-new-file'</samp></pre>
+      
+      <p>再度現在のブランチを確認すると、<code>add-new-file</code> に移動できたことが分かります。</p>
+      
+      
+      <pre><samp>$ git branch
+* add-new-file
+  master</samp></pre>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>次に、パスフレーズを入力します。</p>
+      <p>空のまま生成することもできますが、セキュリティ面を考えてパスフレーズを指定しておきましょう。GitHubのヘルプでもパスフレーズの利用を推奨しています。</p>
+      <pre><samp>Enter passphrase (empty for no passphrase): 【パスフレーズを入力。画面には表示されません】
+Enter same passphrase again: 【パスフレーズを入力。画面には表示されません】</samp></pre>
+      
+      <p>パスフレーズの再入力が完了すると、<strong>秘密鍵</strong>（<code>id_rsa_github</code>）と<strong>公開鍵</strong>（<code>id_rsa_github.pub</code>）<strong>のペアが生成</strong>されます。秘密鍵は、自分しかアクセスできない場所で保管しましょう。</p>
+      
+      <p><code>.pub</code> 拡張子がついている公開鍵は、GitHubなど、SSHで接続したい先のサービスに登録しておくものです。SSH通信をする際に、手元の秘密鍵と通信先に登録してある公開鍵が照合されて、認証が成功します。これにより、秘密鍵を持っている自分のみが通信を許可される仕組みです。</p>
+      
+      <pre><samp>Your identification has been saved in /Users/hoge/.ssh/id_rsa_github.
+Your public key has been saved in /Users/hoge/.ssh/id_rsa_github.pub.
+The key fingerprint is:
+SHA256:【略】 your_email@example.com
+The key's randomart image is:
++---[RSA 4096]----+
+...(snip)...
++----[SHA256]-----+</samp></pre>
+      
+      <p>生成時に指定した場所に鍵が配置されています。</p>
+      <pre><samp>$ ls ~/.ssh/id_rsa_github*
+/Users/hoge/.ssh/id_rsa_github     /Users/hoge/.ssh/id_rsa_github.pub</samp></pre>
+      
+      <p>生成された秘密鍵のパーミッションを <code>600</code> に変更します。</p>
+      <pre><samp>$ chmod 600 ~/.ssh/id_rsa_github</samp></pre>
+      
+      <p>「<code>-rw-------</code>」になっていれば正しいパーミッションに変更できています。</p>
+      <pre><samp>$ ls -la ~/.ssh/id_rsa_github
+-rw-------  1 hoge  staff  **** 1 1 00:00 /Users/hoge/.ssh/id_rsa_github</samp></pre>
+      
+      <p>次に、SSHの <code>config</code> ファイルを編集します。GitHubへSSH接続する際に、どの秘密鍵を指定するのかを管理するのが目的です。</p>
+      <p>以下の設定を、ファイルが存在しない場合は新規作成し、すでにあれば追記します。</p>
+      <p>vim画面に入ります。</p>
+      <pre><samp>$ vim ~/.ssh/config</samp></pre>
+      <pre><samp>Host github
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_github</samp></pre>
+      
+      <p>この設定により、<code>ssh github</code> と入力するだけで、ここで指定したホスト名、ユーザー名、秘密鍵が自動で指定されます。</p>
+      
+      <p><strong>vim画面の終了</strong>は、コマンドモードから挿入モードに移動し <code>:wq</code> を入力してEnterを押下します。<br />コマンドモードから挿入モードに移動したいときは <code> i </code>  <code> I </code>  <code> a </code>  <code> A </code> のいずれかのキーを押すことで移動できます。挿入モード画面では「 <code>esc</code> キー」を押すことでコマンドモードに移動できます。</p>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

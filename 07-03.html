@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>GitHub上でマージとブランチの削除を行いました。しかし、このままではローカル環境はまだ最新状態ではありません。次回の開発に備え最新状態にしてみましょう。</p>
+      
+      <p>まず、 <code>master</code> ブランチに移動します。</p>
+      
+      <pre><samp>$ git branch
+* add-new-file
+  master
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.</samp></pre>
+      
+      <p>そして、 <code>master</code> ブランチをリモート上の最新状態と同期します。</p>
+      
+      <pre><samp>$ git pull
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From github.com:github-sample/test
+   3a45269..5f5191e  master     -> origin/master
+Updating 3a45269..5f5191e
+Fast-forward
+ sample.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.txt</samp></pre>
+      
+      <p>先ほどのプルリクエストのマージによって、作業内容が <code>master</code> ブランチに反映された状態でローカル環境も同期されました。</p>
+      
+      <p>ローカルの作業ブランチも不要になったので削除します。</p>
+      
+      <pre><samp>$ git branch -d add-new-file
+Deleted branch add-new-file (was c55282b).</samp></pre>
+      
+      <p>もし、マージされる前の状態で削除しようとすると、 <code>-d</code> オプションでは以下のようなエラーになります。ローカルの <code>master</code> ブランチがマージ前の状態であっても同じです。</p>
+      
+      <pre><samp>$ git branch -d add-new-file
+error: The branch 'add-new-file' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D add-new-file'.</samp></pre>
+      
+      <p>マージ前のローカルブランチを強制的に削除したい場合は  <code>-d</code> オプションではなく、 <code>-D</code> オプションを使います。</p>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

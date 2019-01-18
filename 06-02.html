@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>前述のようにきちんと <code>add</code> された状態でコミットします。</p>
+      <pre><samp>$ git commit -a</samp></pre>
+      
+      <p> <code>-a</code> オプションは、ここまでの修正をすべてコミットさせるものです。ファイル個別にコミットすることもできます。</p>
+      
+      <p>実行すると、Vimが開かれるので、コミットに対するコメントを追加します（※Vim以外のエディタを開くよう設定を変更することもできます）。</p>
+      <pre><samp> 1 新規ファイルの追加
+  2 # Please enter the commit message for your changes. Lines starting
+  3 # with '#' will be ignored, and an empty message aborts the commit.
+  4 #
+  5 # Committer: 【ユーザー名】
+  6 #
+  7 # On branch add-new-file
+  8 # Changes to be committed:
+  9 #   new file:   sample.txt
+ 10 #</samp></pre>
+      
+      <p>Vimでコメントを保存、終了すると、コミットが完了します。</p>
+      
+      <pre><samp>$ git commit -a
+[add-new-file c55282b] 新規ファイルの追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.txt</samp></pre>
+      
+      
+      <p>この段階で <code>git status</code> してみると、コミットが完了しているので、以下のような状態になります。</p>
+      
+      <pre><samp>$ git status
+On branch add-new-file
+nothing to commit, working tree clean</samp></pre>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

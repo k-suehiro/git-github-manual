@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>現在行っている修正で、まだコミットをしていない内容を確認します。</p>
+      
+      <pre><samp>$ git status
+On branch add-new-file
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+    
+    new file:   sample.txt</samp></pre>
+      
+      <p>先ほど <code>add</code> したので、新規ファイルとして <code>sample.txt</code> が認識されています。</p>
+      
+      <p>もし、<code>add</code> を忘れていると、以下のようにコミットの対象にならない <code>Untracked files</code> として認識され、修正内容をコミットすることができません。</p>
+      
+      <pre><samp>$ git status
+On branch add-new-file
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    
+    sample.txt</samp></pre>
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

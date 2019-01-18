@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+     <p>Git上で使いたい情報を入力します。下記のコマンドで<strong>【ユーザー名】</strong>と<strong>【メールアドレス】</strong>の部分を、自分の情報に置き換えてください。</p>
+      <pre><samp>$ git config --global user.name "【ユーザー名】"
+$ git config --global user.email 【メールアドレス】</samp></pre>
+      <p>以下のコマンドで設定を確認できます。</p>
+      <pre><samp>$ git config --list
+user.name=【ユーザー名】
+user.email=【メールアドレス】
+...</samp></pre>
+    </div>
+  </body>
+</html>

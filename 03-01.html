@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>WindowsであればGit Bash、Macではターミナルを開いて、以下の手順で鍵を作成しましょう。</p>
+      <pre><samp>$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</samp></pre>
+      <ul>
+      <li><code>-t</code> オプションで、鍵のタイプを指定しています。</li>
+      <li><code>-b</code> オプションで、鍵の長さを指定しています。鍵が短いとセキュリティ的に危険です。<br />
+      <code>ssh-keygen</code> のデフォルト値2,048ビットのまま生成・利用される場合も多いのですが、GitHubの推奨は4,096ビット。より安全性の高い値を利用します。</li>
+      <li><code>-C</code> オプションで、鍵にコメントを付加できます。なくても問題ありません。
+複数の鍵を管理するときは、何の鍵なのかを分かりやすくするため、コメントを有効的に利用しましょう。</li>
+      </ul>
+      
+    </div>
+  </body>
+</html>

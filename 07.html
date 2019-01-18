@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>基礎知識として説明したように、GitHubはソースコードを通じて開発者がコミュニケーションできることが特徴で、プルリクエスト（pull request）はそのための機能です。</p>
+      <p>GitHubの画面からプルリクエストを出してみましょう。「Compare & pull request」もしくは「New pull request」をクリックします。</p>
+      <img src="images/20170130132819.png"  class="img-responsive" alt="">
+      
+      <p>新たにコミットした <code>add-new-file</code> ブランチから、 <code>master</code> ブランチへ向けてプルリクエストを送るため、「base」（リクエスト受信側）が「master」ブランチ、「compare」（リクエスト送信側）が「add-new-file」ブランチとなります。</p>
+      <img src="images/20170130132910.png"  class="img-responsive" alt="">
+      <p>プルリクエストのタイトルと、内容を記載します。内容には、これが<strong>何のためのどんな修正なのか、確認できる環境やチケット情報</strong>など、必要な情報を詳しく書きましょう。</p>
+      <img src="images/20170130132806.png"  class="img-responsive" alt="">
+      <p>記載できたら「Create pull request」をクリックします。以上の手順で、プルリクエストのページが作成されます。</p>
+      <img src="images/20170130132742.png"  class="img-responsive" alt="">
+      <p>このURLを、プルリクエストを確認してもらいたい開発者や、動作確認をしてもらいたい関係者などに伝えます。</p>
+      
+      
+      <ul class="mr-index"></ul>
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

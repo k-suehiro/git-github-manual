@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>この段階では、ローカル環境でコミットが完了しています。この内容を、次のコマンドでGitHubへ反映させます。</p>
+      
+      <pre><samp>$ git push origin add-new-file
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 319 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:github-sample/test.git
+ * [new branch]      add-new-file -> add-new-file</samp></pre>
+      
+      <p>GitHubのサイトで確認をすると、ブランチの数が2になり、以下のようなモジュールも表示されます。</p>
+      <img src="images/20170130132815.png"  class="img-responsive" alt="">
+      
+      <p>ブランチを切り替えることにより、それぞれの状態をブラウザ上で確認することもできます。</p>
+      <img src="images/20170130132748.png"  class="img-responsive" alt="">
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.owner.title }}</title>
+    <script src="http://192.168.14.50/templates/preview.js">
+    </script>
+  </head>
+  <body>
+    <div class="mr-page">
+      <h1>{{ page.owner.title }}</h1>
+      <p>先ほど作成した公開鍵をGitHubに登録します。保存した公開鍵（<code>/Users/hoge/.ssh/id_rsa_github.pub</code>）をエディタで開き、中の文字列をコピーします。コピーする際に改行や余分な文字列が入らないように注意しましょう。</p>
+      
+      <p>GitHubのページの右上端にあるアイコンをクリックして、アカウントメニューの中にある「<a href="https://github.com/settings/profile" data-mr-ext-uri target="_blank">Settings</a>」を開きます。</p>
+      <img src="images/20170130132726.png"  class="img-responsive" alt="">
+      
+      <p>プロフィールの設定画面が開きます。</p>
+      <img src="images/20170130132752.png"  class="img-responsive" alt="">
+      
+      <p>左側のメニューから「<a href="https://github.com/settings/keys" data-mr-ext-uri target="_blank">SSH and GPG keys</a>」タブを選択します。</p>
+      
+      <p>「New SSH key」をクリックすると、公開鍵の登録画面が開きます。</p>
+      <img src="images/20170130132844.png"  class="img-responsive" alt="">
+      <ul>
+      <li>「Title」には任意の値を設定可能です。<br />
+      どのPC・サーバに置かれた鍵に対する公開鍵なのか分かるよう、PC名・サーバ名を入れておくと管理しやすくなります。</li>
+      <li>「Key」には、先ほどコピーした公開鍵の値をそのまま貼り付けます。</li>
+      </ul>
+      
+      <p>入力したら「Add SSH key」をクリックします。</p>
+      
+      
+    </div>
+  </body>
+</html>

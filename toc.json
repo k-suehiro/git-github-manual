@@ -1,0 +1,126 @@
+{
+    "title": "今日からはじめるGitHub",
+    "cover": "cover.html",
+    "copyright": "&copy; 2019 CRP1 suehiro",
+    "feature_flags": {
+       "scroll_to_top": true,
+        "mobile_scrollable_body": true,
+        "breadcrumb": true,
+        "search.suggest": ["ext", "nouns"],
+        "menu.auto_hide_except_container":true
+    },
+    "toc": [
+        {
+            "title": "GitとGitHubの基礎知識",
+            "page": "01.html",
+            "children": [
+                {
+                    "title": "Gitではローカルで開発を進めることができる",
+                    "page": "01-01.html"
+                }, {
+                    "title": "Gitの基礎用語",
+                    "page": "01-02.html"
+                }, {
+                    "title": "GitHubでは公開ソフトウェアに修正提案できる",
+                    "page": "01-03.html"
+                }, {
+                    "title": "GitHubの基礎用語",
+                    "page": "01-04.html"
+                }
+            ]
+        }, {
+            "title": "環境の構築（1） ローカル環境でGitを使えるようにする",
+            "page": "02.html",
+            "children": [
+                {
+                    "title": "Gitのインストールと準備",
+                    "page": "02-01.html"
+                }, {
+                    "title": "Gitコマンドが実行できることを確認する",
+                    "page": "02-02.html"
+                }, {
+                    "title": "ユーザー名とメールアドレスを設定する",
+                    "page": "02-03.html"
+                }
+            ]
+        }, {
+            "title": "環境の構築（2） SSHの鍵を取得する",
+            "page": "03.html",
+            "children": [
+                {
+                    "title": "ssh-keygenコマンドで鍵を生成する",
+                    "page": "03-01.html"
+                }, {
+                    "title": "鍵の生成場所とファイル名を確認する",
+                    "page": "03-02.html"
+                }, {
+                    "title": "パスフレーズを入力する",
+                    "page": "03-03.html"
+                }
+            ]
+        }, {
+            "title": "環境の構築（3） GitHubのアカウントを作成する",
+            "page": "04.html",
+            "children": [
+                {
+                    "title": "リポジトリを作成する",
+                    "page": "04-01.html"
+                }, {
+                    "title": "GitHubに公開鍵を登録する",
+                    "page": "04-02.html"
+                }, {
+                    "title": "GitHubへのSSH接続を確認する",
+                    "page": "04-03.html"
+                }
+            ]
+        }, {
+            "title": "GitHubを使う（1） Gitコマンドでリポジトリをコピーする",
+            "page": "05.html",
+            "children": [
+                {
+                    "title": "GitHubで作成したリポジトリ名をコピーする",
+                    "page": "05-01.html"
+                }, {
+                    "title": "リポジトリをローカルにクローンする",
+                    "page": "05-02.html"
+                }, {
+                    "title": "リポジトリの「ブランチ」について",
+                    "page": "05-03.html"
+                }, {
+                    "title": "作業ブランチを作成する",
+                    "page": "05-04.html"
+                }
+            ]
+        }, {
+            "title": "GitHubを使う（2） ファイルを追加してコミットする",
+            "page": "06.html",
+            "children": [
+                {
+                    "title": "コミットする内容を確認する",
+                    "page": "06-01.html"
+                }, {
+                    "title": "コミットする",
+                    "page": "06-02.html"
+                }, {
+                    "title": "GitHubへプッシュする",
+                    "page": "06-03.html"
+                }
+            ]
+        }, {
+            "title": "GitHubを使う（3） プルリクエストしてみる",
+            "page": "07.html",
+            "children": [
+                {
+                    "title": "プルリクエストを確認する",
+                    "page": "07-01.html"
+                }, {
+                    "title": "プルリクエストの終了とマージ",
+                    "page": "07-02.html"
+                }, {
+                    "title": "ローカル環境を最新にする",
+                    "page": "07-03.html"
+                }
+            ]
+        }
+    ]
+}
